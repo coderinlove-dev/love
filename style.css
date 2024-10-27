@@ -1,0 +1,245 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background: #ffc0cb;
+  height: 100%;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  background: #ffc0cb;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #ff69b4;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  padding: 10px;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.navbar .logo {
+  flex: 0;
+}
+
+.navbar .logo img {
+  max-height: 150px;
+  margin-right: 10px;
+}
+
+.navbar .text {
+  flex: 1;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  margin-left: 240px;
+  justify-content: center;
+}
+
+.navbar .text p {
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.navbar .text hr {
+  width: 100%;
+  border: 1px solid white;
+}
+
+/* Message Section */
+.msg {
+  text-align: center;
+  padding: 30px 0;
+  color: black;
+  font-family: 'Cursive';
+}
+
+.msg h1 {
+  font-size: 26px;
+  color: inherit;
+}
+
+.msg hr {
+  width: 50%;
+  margin: 20px auto;
+  border: 1px solid black;
+}
+
+/* Stickers Section */
+.stickers {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.stickers .images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.stickers .images .large-img {
+  max-height: 300px;
+}
+
+.stickers .images .small-img {
+  max-height: 100px;
+}
+
+/* Journey Section */
+
+.journey {
+  position: relative;
+  padding: 20px 0;
+}
+
+.journey::after {
+  content: '';
+  position: absolute;
+  top: 100px; /* Start from the top of the .journey container */
+  left: 50%; /* Center it horizontally */
+  transform: translateX(-50%); /* Adjust to center */
+  height: 100%; /* Full height of the .journey container */
+  width: 10px; /* Width of the vertical line */
+  background-color: #ff69b4; /* Pink color */
+  z-index: 1; /* Ensures it is below the circle */
+}
+
+
+.circle-container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  z-index: 2;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ff69b4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  margin-top:60px;
+}
+
+.heart-icon {
+  width: 25px;
+  height: 25px;
+  color: black;
+  transition: color 0.3s;
+}
+
+.circle:hover .heart-icon {
+  color: red;
+}
+
+/* Journey-item */
+.journey-item {
+  background-color: white;
+  border: 2px solid #ff69b4;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  width: 40%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 60px;
+  box-sizing: border-box;
+}
+
+.journey-item img {
+  max-width: 50px;
+  height: auto;
+}
+
+.journey h1, .messages h1, .future h1, .promise h1, .memories h1, .gift h1 {
+  font-size: 30px;
+  color: #000000;
+  text-align: center;
+}
+
+.journey hr, .messages hr, .future hr, .promise hr, .memories hr, .gift hr {
+  width: 50%;
+  margin: 10px auto;
+  border: 1px solid #5bc0de;
+}
+
+.journey div p {
+  font-size: 18px;
+  color: #444;
+}
+
+.journey img {
+  max-height: 40px;
+  margin-right: 8px;
+}
+
+/* Messages Section */
+.messages p, .future p, .promise p {
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+/* Memories Section */
+.memories p {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.memories img {
+  max-height: 100px;
+  margin: 10px;
+}
+
+/* Gift Section */
+.gift img {
+  display: block;
+  margin: 20px auto;
+  max-height: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar, .stickers {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar .text p {
+    font-size: 14px;
+  }
+
+  .msg h1, .journey h1, .messages h1, .future h1, .promise h1, .memories h1, .gift h1 {
+    font-size: 24px;
+  }
+
+  .msg h1, .journey div p {
+    font-size: 20px;
+  }
+
+  .stickers img, .journey img {
+    max-height: 30px;
+  }
+
+  .memories img {
+    max-height: 80px;
+  }
+
+  .gift img {
+    max-height: 150px;
+  }
+}
